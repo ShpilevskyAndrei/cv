@@ -12,7 +12,7 @@ export const PROJECTS = {
             'This project was developed by me for demonstration purposes. On this site I will update information about my skills, projects and work experience occasionally.',
         adaptivity: 'No',
         url: '/',
-        git: '/error', // change
+        git: 'https://github.com/ShpilevskyAndrei/cv',
     },
     agroex: {
         logo: 'assets/projects/agroex.svg',

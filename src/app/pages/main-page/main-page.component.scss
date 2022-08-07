@@ -13,7 +13,7 @@
         h1 {
             font-size: xxx-large;
             line-height: 3rem;
-            @media only screen and (max-width: $medium-s-screen-min-width) {
+            @media only screen and (max-width: 446px) {
                 font-size: xx-large;
                 line-height: 2rem;
             }
@@ -24,7 +24,7 @@
         }
         p {
             font-size: x-large;
-            @media only screen and (max-width: $medium-s-screen-min-width) {
+            @media only screen and (max-width: 446px) {
                 font-size: large;
             }
         }
@@ -33,7 +33,7 @@
         }
         &__print {
             width: 205px;
-            @media only screen and (max-width: $medium-s-screen-min-width) {
+            @media only screen and (max-width: 446px) {
                 width: 155px;
             }
             &__text {

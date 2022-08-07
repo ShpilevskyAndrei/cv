@@ -1,4 +1,5 @@
 export interface TabsInterface {
-    title: 'string';
+    title: string;
     active: boolean;
+    route: string;
 }

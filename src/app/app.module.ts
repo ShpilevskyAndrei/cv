@@ -3,6 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
 import { MatTabsModule } from '@angular/material/tabs';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,9 +14,7 @@ import { PortfolioPageComponent } from './pages/portfolio-page/portfolio-page.co
 import { ContactPageComponent } from './pages/contact-page/contact-page.component';
 import { MainPageComponent } from './pages/main-page/main-page.component';
 import { ProjectComponent } from './shared/project/project.component';
-import {MatProgressBarModule} from "@angular/material/progress-bar";
 import { ErrorPageComponent } from './pages/error-page/error-page.component';
-import {MatExpansionModule} from "@angular/material/expansion";
 
 @NgModule({
     declarations: [

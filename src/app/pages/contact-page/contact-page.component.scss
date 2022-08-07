@@ -18,7 +18,7 @@
         h3 {
             font-size: xxx-large;
             color: $color-secondary;
-            @media only screen and (max-width: $medium-x-medium-screen-min-width) {
+            @media only screen and (max-width: 678px) {
                 font-size: xx-large;
                 line-height: 2rem;
             }
@@ -32,7 +32,7 @@
                 @include scale-mini;
                 margin: 0 0 0.5rem;
                 font-size: large;
-                @media only screen and (max-width: $medium-x-medium-screen-min-width) {
+                @media only screen and (max-width: 678px) {
                     font-size: medium;
                 }
                 span {
@@ -44,17 +44,17 @@
             margin: 1rem 0;
             a {
                 margin: 1rem;
-                @media only screen and (max-width: $medium-x-medium-screen-min-width) {
+                @media only screen and (max-width: 678px) {
                     margin: 0.5rem;
                 }
-                @media only screen and (max-width: $medium-s-screen-min-width) {
+                @media only screen and (max-width: 446px) {
                     margin: 0.25rem;
                 }
             }
             img {
                 width: 2rem;
                 @include scale-maxi;
-                @media only screen and (max-width: $medium-x-medium-screen-min-width) {
+                @media only screen and (max-width: 678px) {
                     width: 1.5rem;
                 }
             }

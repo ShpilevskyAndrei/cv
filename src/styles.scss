@@ -1,5 +1,3 @@
-@import "styles/responsive";
-
 $color-black: black;
 $color-white-main: white;
 $color-white-secondary: whitesmoke;
@@ -24,30 +22,8 @@ a {
     font-weight: normal;
 }
 
-@mixin scale-mini {
-    transition: 0.25s;
-    &:hover {
-        transform: scale(1.05);
-    }
-}
-
-@mixin scale-maxi {
-    transition: 0.25s;
-    &:hover {
-        transform: scale(1.2);
-    }
-}
-
 button {
     @include scale-mini;
-}
-
-.button-main {
-    margin-top: 2rem;
-    background-color: $color-secondary;
-    a {
-        color: $color-white-main;
-    }
 }
 
 hr {
@@ -71,6 +47,32 @@ hr {
     justify-content: space-between;
 }
 
+.button-main {
+    margin-top: 2rem;
+    background-color: $color-secondary;
+    a {
+        color: $color-white-main;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+@mixin scale-mini {
+    transition: 0.25s;
+    &:hover {
+        transform: scale(1.05);
+    }
+}
+
+@mixin scale-maxi {
+    transition: 0.25s;
+    &:hover {
+        transform: scale(1.2);
+    }
+}
+
 @keyframes printed_text {
     from {
         width: 0;
@@ -81,8 +83,4 @@ hr {
     50% {
         border-right: 3px solid $color-white-main;
     }
-}
-
-::-webkit-scrollbar {
-    width: 0;
 }

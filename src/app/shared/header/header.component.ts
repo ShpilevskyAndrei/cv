@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 
 import { TabsEnum } from './enums/tabs.enum';
+import { TABS } from './consts/tabs';
 
 @Component({
     selector: 'app-header',
@@ -8,25 +9,8 @@ import { TabsEnum } from './enums/tabs.enum';
     styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent {
-    public tabs = {
-        resume: {
-            title: TabsEnum.resume,
-            active: false,
-            route: 'resume',
-        },
-        portfolio: {
-            title: TabsEnum.portfolio,
-            active: false,
-            route: 'portfolio',
-        },
-        contact: {
-            title: TabsEnum.contact,
-            active: false,
-            route: 'contact',
-        },
-    };
-
-    public tabss = [this.tabs.resume, this.tabs.portfolio, this.tabs.contact];
+    public tabs = TABS;
+    public tabsArray = Object.values(this.tabs);
 
     public allTabsInactive(): void {
         this.tabs.resume.active = false;
