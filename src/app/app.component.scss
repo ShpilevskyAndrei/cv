@@ -1,0 +1,9 @@
+:host {
+    .main-container {
+        width: 80vw;
+        margin: 0 10vw;
+        height: calc(100% - 6rem);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      background-color: white;
+    }
+}

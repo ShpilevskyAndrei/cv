@@ -1,0 +1,428 @@
+<mat-tab-group mat-align-tabs="center" class="resume">
+    <mat-tab label="About me" class="about">
+        <ng-container *ngTemplateOutlet="aboutMe"></ng-container>
+    </mat-tab>
+
+    <mat-tab label="Soft skills">
+        <ng-container *ngTemplateOutlet="softSkills"></ng-container>
+    </mat-tab>
+
+    <mat-tab label="Hard skills">
+        <ng-container *ngTemplateOutlet="hardSkills"></ng-container>
+    </mat-tab>
+
+    <mat-tab label="Work Experience">
+        <ng-container *ngTemplateOutlet="workExperience"></ng-container>
+    </mat-tab>
+
+    <mat-tab label="Links" class="links">
+        <ng-container *ngTemplateOutlet="links"></ng-container>
+    </mat-tab>
+</mat-tab-group>
+
+<!--templates-->
+
+<ng-template #aboutMe>
+    <div class="about__content">
+        <div class="about__content__container">
+            <div class="about__content__img">
+                <img
+                    class="about__content__img__file"
+                    src="assets/me.jpg"
+                    alt="Shpilevsky"
+                />
+            </div>
+            <div class="about__content__title">
+                <h3>Andrei Shpilevsky</h3>
+                <h4>FRONTEND DEVELOPER</h4>
+                <p>
+                    Age: <span>{{ age }} years old</span>
+                </p>
+                <p>Nationality: <span>Belarus</span></p>
+                <p>Place of stay: <span>Uzbekistan, Tashkent</span></p>
+            </div>
+        </div>
+        <hr />
+        <div class="about__content__description">
+            <p>
+                Quick learner, diligent, sociable, able to work in a team,
+                ambitious, as well as striving to improve his theoretical and
+                practical skills.
+            </p>
+            <p>
+                Previous experience as an entrepreneur taught me responsibility,
+                flexibility, stress resistance and discipline, and I also
+                acquired a good ability to communicate with completely different
+                people and be a leader.
+            </p>
+        </div>
+    </div>
+</ng-template>
+
+<ng-template #softSkills>
+    <div class="soft-skills">
+        <div class="soft-skills__left">
+            <div class="soft-skills__item">
+                <h3>01</h3>
+                <div class="soft-skills__item__text">
+                    <h3>TEAM PLAYER. REALLY</h3>
+                    <p>
+                        Extensive experience of working in teams as both a
+                        leader and a subordinate.
+                    </p>
+                </div>
+            </div>
+            <div class="soft-skills__item">
+                <h3>02</h3>
+                <div class="soft-skills__item__text">
+                    <h3>CAREERIST AND SELF-MOTIVATED</h3>
+                    <p>
+                        One of the main goals in life is the realization of
+                        myself as a professional, so I always strive to become
+                        one.
+                    </p>
+                </div>
+            </div>
+            <div class="soft-skills__item">
+                <h3>03</h3>
+                <div class="soft-skills__item__text">
+                    <h3>SELF-ORGANIZED</h3>
+                    <p>
+                        I always plan my working day in advance and know how to
+                        prioritize tasks
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="soft-skills__right">
+            <div class="soft-skills__item">
+                <h3>04</h3>
+                <div class="soft-skills__item__text">
+                    <h3>EASILY TRAINED</h3>
+                    <p>
+                        I have the ability and desire to learn quickly and apply
+                        this knowledge in practice
+                    </p>
+                </div>
+            </div>
+            <div class="soft-skills__item">
+                <h3>05</h3>
+                <div class="soft-skills__item__text">
+                    <h3>BUSINESS PERSPECTIVE</h3>
+                    <p>
+                        I am able to figure out software from a business
+                        perception & to convert business challenges into
+                        technical solutions.
+                    </p>
+                </div>
+            </div>
+            <div class="soft-skills__item">
+                <h3>06</h3>
+                <div class="soft-skills__item__text">
+                    <h3>CREATIVITY</h3>
+                    <p>I have more than 6 positive traits.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</ng-template>
+
+<ng-template #hardSkills>
+    <div class="hard-skills">
+        <div class="section-one">
+            <div class="hard-skills__layout block">
+                <h3>Layout</h3>
+                <p>HTML5</p>
+                <mat-progress-bar
+                    mode="determinate"
+                    value="90"
+                ></mat-progress-bar>
+                <p>СSS</p>
+                <mat-progress-bar
+                    mode="determinate"
+                    value="90"
+                ></mat-progress-bar>
+                <p>SASS/SCSS</p>
+                <mat-progress-bar
+                    mode="determinate"
+                    value="80"
+                ></mat-progress-bar>
+                <p>BEM</p>
+                <mat-progress-bar
+                    mode="determinate"
+                    value="80"
+                ></mat-progress-bar>
+                <p>Figma</p>
+                <mat-progress-bar
+                    mode="determinate"
+                    value="50"
+                ></mat-progress-bar>
+                <p>Bootstrap</p>
+                <mat-progress-bar
+                    mode="determinate"
+                    value="30"
+                ></mat-progress-bar>
+                <p>Adaptability</p>
+                <mat-progress-bar
+                    mode="determinate"
+                    value="50"
+                ></mat-progress-bar>
+                <p>Cross-browser</p>
+                <mat-progress-bar
+                    mode="determinate"
+                    value="40"
+                ></mat-progress-bar>
+                <p>Webpack</p>
+                <mat-progress-bar
+                    mode="determinate"
+                    value="40"
+                ></mat-progress-bar>
+            </div>
+        </div>
+        <div class="section-two">
+            <div class="hard-skills__programming block">
+                <h3>Programming</h3>
+                <p>JavaScript</p>
+                <mat-progress-bar
+                    mode="determinate"
+                    value="60"
+                ></mat-progress-bar>
+                <p>TypeScript</p>
+                <mat-progress-bar
+                    mode="determinate"
+                    value="60"
+                ></mat-progress-bar>
+                <p>Angular</p>
+                <mat-progress-bar
+                    mode="determinate"
+                    value="70"
+                ></mat-progress-bar>
+                <p>ngRX</p>
+                <mat-progress-bar
+                    mode="determinate"
+                    value="30"
+                ></mat-progress-bar>
+                <p>RxJS</p>
+                <mat-progress-bar
+                    mode="determinate"
+                    value="45"
+                ></mat-progress-bar>
+            </div>
+            <div class="hard-skills__other block">
+                <h3>Other</h3>
+                <p>Docker</p>
+                <mat-progress-bar
+                    mode="determinate"
+                    value="30"
+                ></mat-progress-bar>
+            </div>
+        </div>
+        <div class="section-three">
+            <div class="hard-skills__lang block">
+                <h3>Languages</h3>
+                <p>Russian</p>
+                <mat-progress-bar
+                    mode="determinate"
+                    value="90"
+                ></mat-progress-bar>
+                <p>English</p>
+                <mat-progress-bar
+                    mode="determinate"
+                    value="50"
+                ></mat-progress-bar>
+            </div>
+            <div class="hard-skills__team-work block">
+                <h3>Team Work</h3>
+                <p>GIT</p>
+                <mat-progress-bar
+                    mode="determinate"
+                    value="75"
+                ></mat-progress-bar>
+                <p>Jira</p>
+                <mat-progress-bar
+                    mode="determinate"
+                    value="90"
+                ></mat-progress-bar>
+                <p>Agile</p>
+                <mat-progress-bar
+                    mode="determinate"
+                    value="50"
+                ></mat-progress-bar>
+                <p>Scrum</p>
+                <mat-progress-bar
+                    mode="determinate"
+                    value="50"
+                ></mat-progress-bar>
+            </div>
+        </div>
+    </div>
+</ng-template>
+
+<ng-template #workExperience>
+    <mat-accordion>
+        <mat-expansion-panel>
+            <mat-expansion-panel-header>
+                <mat-panel-title
+                    >ITechArt
+                    <span> (2022.04 - till now)</span></mat-panel-title
+                >
+                <mat-panel-description> FE DEVELOPER </mat-panel-description>
+            </mat-expansion-panel-header>
+            <hr />
+            <div class="work-experience">
+                <div class="work-experience__company">
+                    <img src="/assets/companies/itechart.png" alt="" />
+                    <a href="https://itechart.com" target="_blank"
+                        >itechart.com</a
+                    >
+                    <p>
+                        iTechArt is a one-stop source for custom software
+                        development. We provide VC-backed startups and
+                        fast-growing tech companies with dedicated engineering
+                        teams, delivering scalable products that users love.
+                    </p>
+                </div>
+                <div class="work-experience__my-func">
+                    <h2>Position: Frontend developer</h2>
+                    <h3>Job responsibilities and functionality:</h3>
+                    <h4>General / design:</h4>
+                    <p>- Participation in Daily, Planning meetings</p>
+                    <p>- Estimation and prioritization of tasks</p>
+                    <p>- Communication with BO, BA and designer</p>
+                    <p>- Active participation in weekly Demo</p>
+                    <p>- Product presentation in Russian/English</p>
+                    <h4>Technical:</h4>
+                    <p>- Layout of pages according to the layout</p>
+                    <p>
+                        - Defining the user's role and dividing its
+                        functionality into guest/user/moderator
+                    </p>
+                    <p>
+                        - Requests to BE for data to identify ads and other
+                        information
+                    </p>
+                    <p>- Logic of rates and purchases of products</p>
+                    <p>
+                        - Creating an npm module and implementing it into the
+                        project
+                    </p>
+                    <p>- Internal notifications for users</p>
+                    <p>
+                        - Adding a Mapbox map with binding regions of the seller
+                    </p>
+                    <p>- Bug fixes</p>
+                    <p>- and etc.</p>
+                </div>
+            </div>
+        </mat-expansion-panel>
+        <mat-expansion-panel>
+            <mat-expansion-panel-header>
+                <mat-panel-title
+                    >Qittiq solutions
+                    <span> (2021.02 - 2022.03)</span></mat-panel-title
+                >
+                <mat-panel-description> FE DEVELOPER </mat-panel-description>
+            </mat-expansion-panel-header>
+            <hr />
+            <div class="work-experience">
+                <div class="work-experience__company">
+                    <img src="/assets/companies/qittiq.png" alt="" />
+                    <a href="https://qittiq.by/" target="_blank">qittiq.by</a>
+                    <p>
+                        QITTIQ SOLUTIONS, based in Belarus, is a company
+                        specialized in providing outsourcing services worldwide.
+                    </p>
+                </div>
+                <div class="work-experience__my-func">
+                    <h2>Position: Frontend developer (freelance)</h2>
+                    <h3>Job responsibilities and functionality:</h3>
+                    <h4>General / design:</h4>
+                    <p>- Participation in Daily, Planning meetings</p>
+                    <p>- Estimation and prioritization of tasks</p>
+                    <p>- Communication with BO, BA and designer</p>
+                    <p>- Active participation in weekly Demo</p>
+                    <h4>Technical:</h4>
+                    <p>- Layout of pages according to the layout</p>
+                    <p>- Development of new features</p>
+                    <p>
+                        - Requests to BE for data to identify ads and other
+                        information
+                    </p>
+                    <p>- Bug fixes</p>
+                    <p>- and etc.</p>
+                </div>
+            </div>
+        </mat-expansion-panel>
+        <mat-expansion-panel>
+            <mat-expansion-panel-header>
+                <mat-panel-title
+                    >Q&B company
+                    <span> (2018.05 - 2021.01)</span></mat-panel-title
+                >
+                <mat-panel-description> BUSINESS OWNER </mat-panel-description>
+            </mat-expansion-panel-header>
+            <hr />
+            <div class="work-experience">
+                <div class="work-experience__company">
+                    <h3>Q&B</h3>
+                    <a
+                        href="https://www.instagram.com/qandbcompany/"
+                        target="_blank"
+                        >instagram/qandbcompany</a
+                    >
+                    <p>
+                        A company specializing in the repair and finishing works
+                        of residential and commercial premises of the premium
+                        segment.
+                    </p>
+                </div>
+                <div class="work-experience__my-func">
+                    <h2>Position: Business owner / commercial director</h2>
+                    <h3>Job responsibilities and functionality:</h3>
+                    <h4>Finance:</h4>
+                    <p>- Management of the company's financial flows</p>
+                    <p>- Formation of assortment and pricing policy</p>
+                    <p>- Development of employee motivation programs</p>
+                    <p>
+                        - Planning and ensuring the implementation of sales
+                        plans
+                    </p>
+                    <h4>Marketing:</h4>
+                    <p>- Market and competitor analysis</p>
+                    <p>- Development of competitive advantage</p>
+                    <p>- Development of a long-term marketing strategy</p>
+                    <p>- Development of a product development strategy</p>
+                    <p>- Customer relationship management</p>
+                    <p>- Control and analysis of work results</p>
+                    <h4>Sales:</h4>
+                    <p>- Drawing up a sales plan</p>
+                    <p>
+                        - Negotiating with customers, conclusion of contracts
+                        for the supply of products
+                    </p>
+                    <p>- Interaction with suppliers</p>
+                    <p>
+                        - Management of sales managers: development of a sales
+                        plan and control of its implementation
+                    </p>
+                    <p>- Recruitment and training of personnel</p>
+                </div>
+            </div>
+        </mat-expansion-panel>
+    </mat-accordion>
+</ng-template>
+
+<ng-template #links>
+    <div class="links__content">
+        <a href="https://www.linkedin.com/in/shpilevskyandrei/" target="_blank"
+            >LinkedIn</a
+        >
+        <a href="https://github.com/shpilevskyandrei" target="_blank">GitHub</a>
+        <a href="https://www.codewars.com/" target="_blank">CodeWars</a>
+        <br />
+        <div>
+            <button mat-raised-button routerLink="/portfolio">Portfolio</button>
+            <button mat-raised-button routerLink="/contact">Contact me</button>
+        </div>
+    </div>
+</ng-template>

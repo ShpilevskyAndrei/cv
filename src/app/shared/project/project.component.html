@@ -1,0 +1,60 @@
+<div class="project">
+    <div class="project__container">
+        <div class="project__container__logo">
+            <img
+                class="project__container__logo__img"
+                src="{{ project.logo }}"
+                alt=""
+            />
+            <h3 class="project__container__logo__title">
+                {{ project.title }}
+            </h3>
+            <span *ngIf="project.url && project.title !== 'CV'; else cv"
+                >go to
+                <a href="{{ project.url }}" target="_blank"> site </a></span
+            >
+            <ng-template #cv>
+                <span>you are on this site</span>
+            </ng-template>
+            <span
+                >link to source
+                <a href="{{ project.git }}" target="_blank"> code </a></span
+            >
+            <hr />
+        </div>
+        <div class="project__container__main-info">
+            <p>
+                Title: <span>{{ project.title }}</span>
+            </p>
+            <p>
+                Owner: <span>{{ project.owner }}</span>
+            </p>
+            <p>
+                Number of participants:
+                <span>{{ project.participants }}</span>
+            </p>
+            <p>
+                Deadlines: <span>{{ project.dates }}</span>
+            </p>
+            <p>
+                FE Technologies: <span>{{ project.technologies }}</span>
+            </p>
+            <p>
+                By layout: <span>{{ project.layout }}</span>
+            </p>
+            <p>
+                Adaptivity: <span>{{ project.adaptivity }}</span>
+            </p>
+            <p>
+                Difficulty:
+                <mat-progress-bar
+                    mode="determinate"
+                    value="{{ project.difficulty }}"
+                ></mat-progress-bar>
+            </p>
+            <br />
+            <p>About project:</p>
+            <span>{{ project.description }}</span>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,34 @@
+<div id="header" class="header-container">
+    <div class="header">
+        <div class="header__logo-container" routerLink="">
+            <span
+                class="header__logo-container__logo-text"
+                (click)="allTabsInactive()"
+            >
+                &#123; } <span>Andrei Shpilevsky</span>
+            </span>
+        </div>
+        <div class="header__nav">
+            <ng-container *ngFor="let tab of tabss">
+                <a
+                    class="header__nav__item"
+                    [ngClass]="tab.active ? 'header__nav__item__active' : ''"
+                    (click)="activeTab(tab.title)"
+                    routerLink="{{ tab.route }}"
+                    >{{ tab.title }}</a
+                >
+            </ng-container>
+        </div>
+        <div class="header__contact">
+            <button mat-raised-button>
+                <a href="assets/Shpilevsky%20Andrei.pdf" download>Get CV</a>
+            </button>
+            <a
+                class="header__contact__responsive-button"
+                href="assets/Shpilevsky%20Andrei.pdf"
+                download
+                >CV</a
+            >
+        </div>
+    </div>
+</div>

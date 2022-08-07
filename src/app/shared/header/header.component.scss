@@ -1,0 +1,85 @@
+@import "src/styles";
+
+:host {
+    .header-container {
+        width: 100%;
+        background-color: $color-white-main;
+        display: flex;
+        justify-content: center;
+        position: sticky;
+        top: 0;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .header {
+        width: 75vw;
+        height: 6rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &__logo-container {
+            width: 15vw;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            &__logo-text {
+                @include scale-mini;
+                font-size: large;
+                font-weight: bold;
+                color: $color-main;
+                cursor: pointer;
+                min-width: 25px;
+                &:hover {
+                    color: $color-secondary;
+                }
+                span {
+                    @media only screen and (max-width: $ipad-min-device-width) {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        &__nav {
+            &__item {
+                padding: 0.5rem 0;
+                margin: 0 20px;
+                cursor: pointer;
+                text-decoration: none;
+                color: $color-main;
+                @media only screen and (max-width: 755px) {
+                    margin: 0 10px;
+                }
+                &:hover {
+                    color: $color-secondary;
+                }
+                &__active {
+                    font-size: large;
+                    font-weight: 500;
+                    color: $color-secondary;
+                }
+            }
+        }
+
+        &__contact {
+            width: 15vw;
+            display: flex;
+            justify-content: flex-end;
+            button {
+                display: none;
+                @media only screen and (min-width: 755px) {
+                    display: block;
+                }
+            }
+            &__responsive-button {
+                font-size: large;
+                font-weight: 500;
+                display: none;
+                color: $color-secondary;
+                @media only screen and (max-width: 755px) {
+                    display: block;
+                }
+            }
+        }
+    }
+}

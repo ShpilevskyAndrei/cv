@@ -1,0 +1,88 @@
+@import "styles/responsive";
+
+$color-black: black;
+$color-white-main: white;
+$color-white-secondary: whitesmoke;
+
+$color-main: $color-black;
+$color-secondary: #3f51b5;
+$color-info: darkgrey;
+
+html,
+body {
+    height: 100%;
+}
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    background-color: $color-white-secondary;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-weight: normal;
+}
+
+@mixin scale-mini {
+    transition: 0.25s;
+    &:hover {
+        transform: scale(1.05);
+    }
+}
+
+@mixin scale-maxi {
+    transition: 0.25s;
+    &:hover {
+        transform: scale(1.2);
+    }
+}
+
+button {
+    @include scale-mini;
+}
+
+.button-main {
+    margin-top: 2rem;
+    background-color: $color-secondary;
+    a {
+        color: $color-white-main;
+    }
+}
+
+hr {
+    background-color: $color-secondary;
+    border: 1px solid $color-secondary;
+    border-radius: 50%;
+}
+
+.mat-tab-body-wrapper {
+    height: 100%;
+    margin: 2.5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mat-tab-body {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@keyframes printed_text {
+    from {
+        width: 0;
+    }
+}
+
+@keyframes cursor-pulse {
+    50% {
+        border-right: 3px solid $color-white-main;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}

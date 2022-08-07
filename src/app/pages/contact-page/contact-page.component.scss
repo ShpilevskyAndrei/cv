@@ -1,0 +1,63 @@
+@import "src/styles";
+
+:host {
+    .contact-container {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .contact {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        hr {
+            width: 100%;
+        }
+        h3 {
+            font-size: xxx-large;
+            color: $color-secondary;
+            @media only screen and (max-width: $medium-x-medium-screen-min-width) {
+                font-size: xx-large;
+                line-height: 2rem;
+            }
+        }
+        &__phones-email {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            a {
+                @include scale-mini;
+                margin: 0 0 0.5rem;
+                font-size: large;
+                @media only screen and (max-width: $medium-x-medium-screen-min-width) {
+                    font-size: medium;
+                }
+                span {
+                    color: $color-info;
+                }
+            }
+        }
+        &__messengers {
+            margin: 1rem 0;
+            a {
+                margin: 1rem;
+                @media only screen and (max-width: $medium-x-medium-screen-min-width) {
+                    margin: 0.5rem;
+                }
+                @media only screen and (max-width: $medium-s-screen-min-width) {
+                    margin: 0.25rem;
+                }
+            }
+            img {
+                width: 2rem;
+                @include scale-maxi;
+                @media only screen and (max-width: $medium-x-medium-screen-min-width) {
+                    width: 1.5rem;
+                }
+            }
+        }
+    }
+}
