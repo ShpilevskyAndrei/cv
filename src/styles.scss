@@ -1,10 +1,6 @@
-$color-black: black;
-$color-white-main: white;
-$color-white-secondary: whitesmoke;
-
-$color-main: $color-black;
-$color-secondary: #3f51b5;
-$color-info: darkgrey;
+@import "src/styles/colors";
+@import "src/styles/mixines";
+@import "src/styles/keyframes";
 
 html,
 body {
@@ -57,30 +53,4 @@ hr {
 
 ::-webkit-scrollbar {
     width: 0;
-}
-
-@mixin scale-mini {
-    transition: 0.25s;
-    &:hover {
-        transform: scale(1.05);
-    }
-}
-
-@mixin scale-maxi {
-    transition: 0.25s;
-    &:hover {
-        transform: scale(1.2);
-    }
-}
-
-@keyframes printed_text {
-    from {
-        width: 0;
-    }
-}
-
-@keyframes cursor-pulse {
-    50% {
-        border-right: 3px solid $color-white-main;
-    }
 }
