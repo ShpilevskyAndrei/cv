@@ -9,7 +9,7 @@
         "watch": "ng build --watch --configuration development",
         "test": "ng test",
         "lint": "eslint --ext .ts,.tsx src --fix",
-        "heroku-postbuild": "ng build --prod"
+        "heroku-postbuild": "ng build"
     },
     "prettier": {
         "tabWidth": 4
