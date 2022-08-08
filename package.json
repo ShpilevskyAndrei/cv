@@ -3,12 +3,13 @@
     "version": "0.0.0",
     "scripts": {
         "ng": "ng",
-        "start": "ng serve",
+        "start": "node server.js",
+        "open": "ng serve",
         "build": "ng build",
         "watch": "ng build --watch --configuration development",
         "test": "ng test",
         "lint": "eslint --ext .ts,.tsx src --fix",
-        "heroku-postbuild": "ng build -prod"
+        "heroku-postbuild": "ng build --prod"
     },
     "prettier": {
         "tabWidth": 4
@@ -17,7 +18,7 @@
     "dependencies": {
         "@angular/animations": "^14.0.0",
         "@angular/cdk": "^14.1.0",
-        "@angular/cli": "~14.0.5",
+        "@angular/cli": "^14.1.1",
         "@angular/common": "^14.0.0",
         "@angular/compiler": "^14.0.0",
         "@angular/compiler-cli": "^14.0.0",
@@ -41,8 +42,6 @@
         "@angular-eslint/eslint-plugin-template": "14.0.2",
         "@angular-eslint/schematics": "14.0.2",
         "@angular-eslint/template-parser": "14.0.2",
-        "@angular/cli": "~14.0.5",
-        "@angular/compiler-cli": "^14.0.0",
         "@types/jasmine": "~4.0.0",
         "@typescript-eslint/eslint-plugin": "5.29.0",
         "@typescript-eslint/parser": "5.29.0",
@@ -55,8 +54,7 @@
         "karma-coverage": "~2.2.0",
         "karma-jasmine": "~5.0.0",
         "karma-jasmine-html-reporter": "~1.7.0",
-        "prettier": "^2.7.1",
-        "typescript": "~4.7.2"
+        "prettier": "^2.7.1"
     },
     "engines": {
         "node": "16.15.1",
