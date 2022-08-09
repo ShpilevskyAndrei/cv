@@ -48,14 +48,14 @@
                     margin: 0.5rem;
                 }
                 @media only screen and (max-width: 446px) {
-                    margin: 0.25rem;
+                    margin: 0.4rem;
                 }
             }
             img {
                 width: 2rem;
                 @include scale-maxi;
                 @media only screen and (max-width: 678px) {
-                    width: 1.5rem;
+                    width: 1.75rem;
                 }
             }
         }

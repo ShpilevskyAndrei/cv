@@ -27,6 +27,8 @@
                         margin: 0 1.5rem 0 0;
                         min-height: 130px;
                         min-width: 130px;
+                        max-width: 300px;
+                        max-height: 300px;
                         height: 14vw;
                         width: 14vw;
                         border-radius: 50%;
@@ -69,6 +71,7 @@
                     width: 30%;
                 }
                 &__description {
+                    margin-top: 0.5rem;
                     p {
                         text-align: center;
                     }
@@ -243,13 +246,12 @@ mat-accordion {
                     margin-top: 1rem;
                 }
                 a {
-                    color: $color-info;
-                    margin: 1rem 0;
-                }
-                h3 {
-                    font-family: impact, "Helvetica Neue", sans-serif;
-                    font-size: 30px;
-                    margin: 0;
+                    margin-bottom: 1.25rem;
+                    h3 {
+                        font-family: impact, "Helvetica Neue", sans-serif;
+                        font-size: 30px;
+                        margin: 0;
+                    }
                 }
                 img {
                     width: 7rem;
