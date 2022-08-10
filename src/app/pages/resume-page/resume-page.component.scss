@@ -169,6 +169,7 @@
             }
             .section-three,
             .section-two {
+                justify-content: space-between;
                 height: 100%;
                 @media only screen and (max-width: 663px) {
                     height: auto;
@@ -179,10 +180,6 @@
                 @media only screen and (max-width: 663px) {
                     align-self: center;
                 }
-            }
-            .section-two,
-            section-three {
-                justify-content: space-between;
             }
             .block {
                 width: 80%;
