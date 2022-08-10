@@ -1,23 +1,33 @@
 <mat-tab-group mat-align-tabs="center" class="resume">
-    <mat-tab label="About me" class="about">
-        <ng-container *ngTemplateOutlet="aboutMe"></ng-container>
-    </mat-tab>
+    <section>
+        <mat-tab label="About me" class="about">
+            <ng-container *ngTemplateOutlet="aboutMe"></ng-container>
+        </mat-tab>
+    </section>
 
-    <mat-tab label="Soft skills">
-        <ng-container *ngTemplateOutlet="softSkills"></ng-container>
-    </mat-tab>
+    <section>
+        <mat-tab label="Soft skills">
+            <ng-container *ngTemplateOutlet="softSkills"></ng-container>
+        </mat-tab>
+    </section>
 
-    <mat-tab label="Hard skills">
-        <ng-container *ngTemplateOutlet="hardSkills"></ng-container>
-    </mat-tab>
+    <section>
+        <mat-tab label="Hard skills">
+            <ng-container *ngTemplateOutlet="hardSkills"></ng-container>
+        </mat-tab>
+    </section>
 
-    <mat-tab label="Work Experience">
-        <ng-container *ngTemplateOutlet="workExperience"></ng-container>
-    </mat-tab>
+    <section>
+        <mat-tab label="Work Experience">
+            <ng-container *ngTemplateOutlet="workExperience"></ng-container>
+        </mat-tab>
+    </section>
 
-    <mat-tab label="Links" class="links">
-        <ng-container *ngTemplateOutlet="links"></ng-container>
-    </mat-tab>
+    <section>
+        <mat-tab label="Links" class="links">
+            <ng-container *ngTemplateOutlet="links"></ng-container>
+        </mat-tab>
+    </section>
 </mat-tab-group>
 
 <!--templates-->
@@ -271,7 +281,10 @@
             <div class="work-experience">
                 <div class="work-experience__company">
                     <a href="https://itechart.com" target="_blank"
-                        ><img src="/assets/companies/itechart.png" alt=""
+                        ><img
+                            src="/assets/companies/itechart.png"
+                            alt="ITechArt logo"
+                            title="ITechArt logo"
                     /></a>
                     <p>
                         iTechArt is a one-stop source for custom software
@@ -325,7 +338,10 @@
             <div class="work-experience">
                 <div class="work-experience__company">
                     <a href="https://qittiq.by/" target="_blank"
-                        ><img src="/assets/companies/qittiq.png" alt=""
+                        ><img
+                            src="/assets/companies/qittiq.png"
+                            alt="QITTIQ logo"
+                            title="QITTIQ logo"
                     /></a>
                     <p>
                         QITTIQ SOLUTIONS, based in Belarus, is a company

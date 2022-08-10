@@ -1,7 +1,9 @@
-<mat-tab-group mat-align-tabs="center" style="height: 100%">
-    <ng-container *ngFor="let project of projectsArray">
-        <mat-tab label="{{ project.title }}">
-            <app-project [project]="project"></app-project>
-        </mat-tab>
-    </ng-container>
-</mat-tab-group>
+<main>
+    <mat-tab-group mat-align-tabs="center" style="height: 100%">
+        <ng-container *ngFor="let project of projectsArray">
+            <mat-tab label="{{ project.title }}">
+                <app-project [project]="project"></app-project>
+            </mat-tab>
+        </ng-container>
+    </mat-tab-group>
+</main>
