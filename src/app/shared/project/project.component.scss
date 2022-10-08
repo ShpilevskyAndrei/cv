@@ -52,11 +52,15 @@
             }
 
             &__main-info {
+                height: 100%;
                 text-align: right;
                 width: 50%;
                 @media only screen and (max-width: 760px) {
                     width: 95%;
                     text-align: center;
+                }
+                mat-tab-group {
+                    height: 100%;
                 }
                 mat-progress-bar {
                     margin: 0.25rem 0;
@@ -64,11 +68,10 @@
                 p,
                 a {
                     color: $color-info;
-
-                    span {
-                        font-weight: 550;
-                        color: $color-black;
-                    }
+                }
+                span {
+                    font-weight: 550;
+                    color: $color-black;
                 }
             }
         }

@@ -1,61 +1,99 @@
 <article class="project">
     <div class="project__container">
         <div class="project__container__logo">
-            <img
-                class="project__container__logo__img"
-                src="{{ project.logo }}"
-                alt="{{ project.title }} icon"
-                title="{{ project.title }}"
-            />
-            <h3 class="project__container__logo__title">
-                {{ project.title }}
-            </h3>
-            <span *ngIf="project.url && project.title !== 'CV'; else cv"
-                >go to
-                <a href="{{ project.url }}" target="_blank"> site </a></span
+            <a
+                href="{{ project.url }}"
+                [target]="project.url === '/error' ? '_self' : '_blank'"
             >
-            <ng-template #cv>
-                <span>you are on this site</span>
-            </ng-template>
-            <span
-                >link to source
-                <a href="{{ project.git }}" target="_blank"> code </a></span
+                <img
+                    class="project__container__logo__img"
+                    src="{{ project.logo }}"
+                    alt="{{ project.title }} icon"
+                    title="{{ project.title }}"
+                />
+            </a>
+            <a
+                href="{{ project.url }}"
+                [target]="project.url === '/error' ? '_self' : '_blank'"
             >
-            <hr />
+                <h3 class="project__container__logo__title">
+                    {{ project.title }}
+                </h3>
+            </a>
         </div>
         <div class="project__container__main-info">
-            <p>
-                Title: <span>{{ project.title }}</span>
-            </p>
-            <p>
-                Owner: <span>{{ project.owner }}</span>
-            </p>
-            <p>
-                Number of participants:
-                <span>{{ project.participants }}</span>
-            </p>
-            <p>
-                Deadlines: <span>{{ project.dates }}</span>
-            </p>
-            <p>
-                FE Technologies: <span>{{ project.technologies }}</span>
-            </p>
-            <p>
-                By layout: <span>{{ project.layout }}</span>
-            </p>
-            <p>
-                Adaptivity: <span>{{ project.adaptivity }}</span>
-            </p>
-            <p>
-                Difficulty:
-                <mat-progress-bar
-                    mode="determinate"
-                    value="{{ project.difficulty }}"
-                ></mat-progress-bar>
-            </p>
-            <br />
-            <p>About project:</p>
-            <span>{{ project.description }}</span>
+            <div style="height: 100%">
+                <mat-tab-group mat-align-tabs="center" style="height: 100%">
+                    <mat-tab label="About project">
+                        <ng-container
+                            class="project__container__main-info__description"
+                            *ngTemplateOutlet="aboutProject"
+                        ></ng-container>
+                    </mat-tab>
+                    <mat-tab label="My role">
+                        <ng-container
+                            class="project__container__main-info__description"
+                            *ngTemplateOutlet="myContribution"
+                        ></ng-container>
+                    </mat-tab>
+                </mat-tab-group>
+            </div>
+
+            <ng-template style="height: 100%" #myContribution>
+                <p>
+                    Role: <span>{{ project.role }}</span>
+                </p>
+                <p>
+                    Stack: <span>{{ project.stack }}</span>
+                </p>
+                <span style="color: darkgrey; font-weight: normal">
+                    Achievements:
+                </span>
+              <br>
+              <span [innerHTML]="project.achievements"></span>
+            </ng-template>
+
+            <ng-template #aboutProject class="center">
+                <p>
+                    Title: <span>{{ project.title }}</span>
+                </p>
+                <p>
+                    Type: <span>{{ project.type }}</span>
+                </p>
+                <p *ngIf="project.participants">
+                    Number of participants:
+                    <span>{{ project.participants }}</span>
+                </p>
+                <p>
+                    Terms: <span>{{ project.dates }}</span>
+                </p>
+                <p>
+                    FE Technologies: <span>{{ project.FeTechnologies }}</span>
+                </p>
+                <p *ngIf="project.BeTechnologies">
+                    BE Technologies: <span>{{ project.BeTechnologies }}</span>
+                </p>
+                <p *ngIf="project.MobileTechnologies">
+                    Mobile Technologies:
+                    <span>{{ project.MobileTechnologies }}</span>
+                </p>
+                <p *ngIf="project.layout">
+                    By layout: <span>{{ project.layout }}</span>
+                </p>
+                <p *ngIf="project.adaptivity">
+                    Adaptivity: <span>{{ project.adaptivity }}</span>
+                </p>
+                <p>
+                    Difficulty:
+                    <mat-progress-bar
+                        mode="determinate"
+                        value="{{ project.difficulty }}"
+                    ></mat-progress-bar>
+                </p>
+                <br />
+                <p>About project:</p>
+                <span>{{ project.description }}</span>
+            </ng-template>
         </div>
     </div>
 </article>

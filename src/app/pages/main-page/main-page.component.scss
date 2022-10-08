@@ -32,9 +32,9 @@
             margin-top: 5rem;
         }
         &__print {
-            width: 205px;
+            width: 292px;
             @media only screen and (max-width: 446px) {
-                width: 155px;
+                width: 220px;
             }
             &__text {
                 color: $color-info;
@@ -43,7 +43,7 @@
                 white-space: nowrap;
                 overflow: hidden;
                 border-right: 3px solid $color-black;
-                animation: printed_text 3s steps(19), cursor-pulse 1.5s infinite;
+                animation: printed_text 3s steps(25), cursor-pulse 1.5s infinite;
             }
         }
     }

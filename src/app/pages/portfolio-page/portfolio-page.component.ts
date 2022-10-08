@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { PROJECTS } from './consts/projects';
+import { PROJECTS } from '../../shared/project/consts/projects';
 
 @Component({
     selector: 'app-portfolio-page',

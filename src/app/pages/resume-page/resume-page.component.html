@@ -22,12 +22,6 @@
             <ng-container *ngTemplateOutlet="workExperience"></ng-container>
         </mat-tab>
     </section>
-
-    <section>
-        <mat-tab label="Links" class="links">
-            <ng-container *ngTemplateOutlet="links"></ng-container>
-        </mat-tab>
-    </section>
 </mat-tab-group>
 
 <!--templates-->
@@ -274,9 +268,11 @@
         <mat-expansion-panel>
             <mat-expansion-panel-header>
                 <mat-panel-title
-                    >ITechArt <span> (2022.04 - 2022.07)</span></mat-panel-title
+                    >ITechArt<span>since 2022.04</span></mat-panel-title
                 >
-                <mat-panel-description> FE DEVELOPER </mat-panel-description>
+                <mat-panel-description
+                    >Fullstack software engineer
+                </mat-panel-description>
             </mat-expansion-panel-header>
             <hr />
             <div class="work-experience">
@@ -295,34 +291,25 @@
                     </p>
                 </div>
                 <div class="work-experience__my-func">
-                    <h2>Position: Frontend developer</h2>
                     <h3>Job responsibilities and functionality:</h3>
                     <h4>General / design:</h4>
                     <p>- Participation in Daily, Planning meetings</p>
                     <p>- Estimation and prioritization of tasks</p>
                     <p>- Communication with BO, BA and designer</p>
                     <p>- Active participation in weekly Demo</p>
-                    <p>- Product presentation in Russian/English</p>
+                    <p>- Product presentation</p>
                     <h4>Technical:</h4>
+                    <p>- Mentoring / Participation in the student's lab</p>
+                    <p>- Design Angular application architecture</p>
+                    <p>- Setting up the project environment</p>
+                    <p>- Regulation of code style and code writing rules</p>
+                    <p>- Code review & refactoring</p>
+                    <p>
+                        - Development of new features on the front-end and
+                        back-end
+                    </p>
+                    <p>- Bug hunting, bug fixing</p>
                     <p>- Layout of pages according to the layout</p>
-                    <p>
-                        - Defining the user's role and dividing its
-                        functionality into guest/user/moderator
-                    </p>
-                    <p>
-                        - Requests to BE for data to identify ads and other
-                        information
-                    </p>
-                    <p>- Logic of rates and purchases of products</p>
-                    <p>
-                        - Creating an npm module and implementing it into the
-                        project
-                    </p>
-                    <p>- Internal notifications for users</p>
-                    <p>
-                        - Adding a Mapbox map with binding regions of the seller
-                    </p>
-                    <p>- Bug fixes</p>
                     <p>- and etc.</p>
                 </div>
             </div>
@@ -333,7 +320,9 @@
                     >Qittiq solutions
                     <span> (2021.02 - 2022.03)</span></mat-panel-title
                 >
-                <mat-panel-description> FE DEVELOPER </mat-panel-description>
+                <mat-panel-description
+                    >Frontend software engineer</mat-panel-description
+                >
             </mat-expansion-panel-header>
             <hr />
             <div class="work-experience">
@@ -350,7 +339,6 @@
                     </p>
                 </div>
                 <div class="work-experience__my-func">
-                    <h2>Position: Frontend developer (freelance)</h2>
                     <h3>Job responsibilities and functionality:</h3>
                     <h4>General / design:</h4>
                     <p>- Participation in Daily, Planning meetings</p>
@@ -375,7 +363,7 @@
                     >Q&B company
                     <span> (2018.05 - 2021.01)</span></mat-panel-title
                 >
-                <mat-panel-description> BUSINESS OWNER </mat-panel-description>
+                <mat-panel-description> Business owner </mat-panel-description>
             </mat-expansion-panel-header>
             <hr />
             <div class="work-experience">
@@ -392,7 +380,6 @@
                     </p>
                 </div>
                 <div class="work-experience__my-func">
-                    <h2>Position: Business owner / commercial director</h2>
                     <h3>Job responsibilities and functionality:</h3>
                     <h4>Finance:</h4>
                     <p>- Management of the company's financial flows</p>
@@ -425,19 +412,4 @@
             </div>
         </mat-expansion-panel>
     </mat-accordion>
-</ng-template>
-
-<ng-template #links>
-    <div class="links__content">
-        <a href="https://www.linkedin.com/in/shpilevskyandrei/" target="_blank"
-            >LinkedIn</a
-        >
-        <a href="https://github.com/shpilevskyandrei" target="_blank">GitHub</a>
-        <a href="https://www.codewars.com/" target="_blank">CodeWars</a>
-        <br />
-        <div>
-            <button mat-raised-button routerLink="/portfolio">Portfolio</button>
-            <button mat-raised-button routerLink="/contact">Contact me</button>
-        </div>
-    </div>
 </ng-template>
