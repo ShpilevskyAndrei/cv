@@ -4,7 +4,7 @@ import { ProjectInterface } from '../interfaces/project.interface';
 export const PROJECTS: Record<ProjectsEnum, ProjectInterface> = {
     SBS: {
         logo: 'assets/projects/sbs.jpg',
-        title: 'Squared Business Solution',
+        title: 'SBS',
         type: 'Report generator',
         participants: '7',
         dates: '2022.08.01 - in progress',
@@ -15,7 +15,7 @@ export const PROJECTS: Record<ProjectsEnum, ProjectInterface> = {
         description:
             'Squared Business Solution is a platform that helps US medical institutions to keep in-depth statistics based on their data and static data',
         adaptivity: '',
-        url: '/error', //change
+        url: 'https://fivestar.squaredbusinesssolutions.com/',
         role: 'Fullstack Software Engineer',
         stack: 'HTML, CSS, Angular, .Net 5 WebApi, MS SQL Server, Entity Framework, Spire.Xls, MongoDB, Azure Functions, Azure SignalR, Azure Queue',
         achievements:

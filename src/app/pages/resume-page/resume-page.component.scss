@@ -191,6 +191,48 @@
             }
         }
 
+        .certificates {
+            display: flex;
+            flex-wrap: wrap;
+            &__item {
+                display: flex;
+                margin: 20px;
+                &__img-container {
+                    display: flex;
+                    align-self: center;
+                    justify-content: center;
+                    max-width: 70px;
+                    max-height: 70px;
+                    &__img {
+                        max-width: 50px;
+                        max-height: 50px;
+                        margin-right: 10px;
+                        border-radius: 10px;
+                        align-self: center;
+                    }
+                }
+                &__info {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    &__text {
+                        display: flex;
+                        flex-direction: column;
+                        &__title {
+                            color: #3f51b5;
+                            font-weight: 550;
+                            font-size: 18px;
+                        }
+                        &__company {
+                        }
+                    }
+                    &__link {
+                        color: darkgrey;
+                    }
+                }
+            }
+        }
+
         .links {
             height: 100%;
             &__content {

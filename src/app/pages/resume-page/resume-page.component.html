@@ -18,6 +18,12 @@
     </section>
 
     <section>
+        <mat-tab label="Certificates">
+            <ng-container *ngTemplateOutlet="certificatesTab"></ng-container>
+        </mat-tab>
+    </section>
+
+    <section>
         <mat-tab label="Work Experience">
             <ng-container *ngTemplateOutlet="workExperience"></ng-container>
         </mat-tab>
@@ -32,14 +38,14 @@
             <div class="about__content__img">
                 <img
                     class="about__content__img__file"
-                    src="assets/me.jpg"
+                    src="assets/me.png"
                     alt="Shpilevsky Andrei photo"
                     title="Shpilevsky Andrei photo"
                 />
             </div>
             <div class="about__content__title">
                 <h3>Andrei Shpilevsky</h3>
-                <h4>FRONTEND DEVELOPER</h4>
+                <h4>Software engineer</h4>
                 <p>
                     Age: <span>{{ age }} years old</span>
                 </p>
@@ -50,15 +56,32 @@
         <hr />
         <div class="about__content__description">
             <p>
-                Quick learner, diligent, sociable, able to work in a team,
-                ambitious, as well as striving to improve his theoretical and
-                practical skills.
+                Hi, my name is Andrei and I am a software engineer. <br />
+                My job involves commercial application development both
+                front-end and back-end parts.
             </p>
-            <p>
-                Previous experience as an entrepreneur taught me responsibility,
-                flexibility, stress resistance and discipline, and I also
-                acquired a good ability to communicate with completely different
-                people and be a leader.
+            <p
+                style="color: grey; cursor: pointer"
+                *ngIf="aboutMeInfo === 'more...'"
+                (click)="changeAboutMeInfo()"
+            >
+                {{ aboutMeInfo }}
+            </p>
+            <p *ngIf="aboutMeInfoOpened">
+                In the UI part I deal with HTML, CSS + preprocessors, Angular,
+                RxJS, NgRX, Bem methodology, etc.<br />
+                As for the backend part - I deal with .Net, MS SQL, Azure.<br /><br />
+                My duties involve creating new features for apps, code review,
+                writing clean code, <br />resolving some app conflicts,
+                debugging and so on and so forth. <br /><br />And I am
+                responsible for doing my work well.
+            </p>
+            <p
+                style="color: grey; cursor: pointer"
+                *ngIf="aboutMeInfo === '...less'"
+                (click)="changeAboutMeInfo()"
+            >
+                {{ aboutMeInfo }}
             </p>
         </div>
     </div>
@@ -136,89 +159,89 @@
     <div class="hard-skills">
         <div class="section-one">
             <div class="hard-skills__layout block">
-                <h3>Layout</h3>
-                <p>HTML5</p>
+                <h3>Frontend</h3>
+                <p>HTML</p>
                 <mat-progress-bar
                     mode="determinate"
-                    value="90"
+                    value="85"
                 ></mat-progress-bar>
-                <p>СSS</p>
+                <p>СSS, SASS/SCSS</p>
                 <mat-progress-bar
                     mode="determinate"
-                    value="90"
+                    value="85"
                 ></mat-progress-bar>
-                <p>SASS/SCSS</p>
+                <p>JavaScript</p>
+                <mat-progress-bar
+                    mode="determinate"
+                    value="70"
+                ></mat-progress-bar>
+                <p>TypeScript</p>
                 <mat-progress-bar
                     mode="determinate"
                     value="80"
-                ></mat-progress-bar>
-                <p>BEM</p>
-                <mat-progress-bar
-                    mode="determinate"
-                    value="80"
-                ></mat-progress-bar>
-                <p>Figma</p>
-                <mat-progress-bar
-                    mode="determinate"
-                    value="50"
                 ></mat-progress-bar>
                 <p>Bootstrap</p>
                 <mat-progress-bar
                     mode="determinate"
-                    value="30"
+                    value="75"
                 ></mat-progress-bar>
-                <p>Adaptability</p>
+                <p>Angular Material</p>
                 <mat-progress-bar
                     mode="determinate"
-                    value="50"
+                    value="85"
                 ></mat-progress-bar>
-                <p>Cross-browser</p>
+                <p>Angular</p>
                 <mat-progress-bar
                     mode="determinate"
-                    value="40"
+                    value="75"
                 ></mat-progress-bar>
-                <p>Webpack</p>
+                <p>RxJS</p>
                 <mat-progress-bar
                     mode="determinate"
-                    value="40"
+                    value="60"
+                ></mat-progress-bar>
+                <p>ngRX</p>
+                <mat-progress-bar
+                    mode="determinate"
+                    value="60"
                 ></mat-progress-bar>
             </div>
         </div>
         <div class="section-two">
             <div class="hard-skills__programming block">
-                <h3>Programming</h3>
-                <p>JavaScript</p>
-                <mat-progress-bar
-                    mode="determinate"
-                    value="60"
-                ></mat-progress-bar>
-                <p>TypeScript</p>
-                <mat-progress-bar
-                    mode="determinate"
-                    value="60"
-                ></mat-progress-bar>
-                <p>Angular</p>
+                <h3>Backend</h3>
+                <p>C#</p>
                 <mat-progress-bar
                     mode="determinate"
                     value="70"
                 ></mat-progress-bar>
-                <p>ngRX</p>
+                <p>.Net</p>
+                <mat-progress-bar
+                    mode="determinate"
+                    value="50"
+                ></mat-progress-bar>
+                <p>MS SQL Server</p>
+                <mat-progress-bar
+                    mode="determinate"
+                    value="65"
+                ></mat-progress-bar>
+                <p>Azure</p>
                 <mat-progress-bar
                     mode="determinate"
                     value="30"
                 ></mat-progress-bar>
-                <p>RxJS</p>
+                <p>Entity Framework</p>
                 <mat-progress-bar
                     mode="determinate"
-                    value="45"
+                    value="40"
                 ></mat-progress-bar>
             </div>
             <div class="hard-skills__other block">
                 <h3>Other</h3>
-                <p>Docker</p>
+                <p>Unity</p>
                 <mat-progress-bar
                     mode="determinate"
-                    value="30"
+                    value="25"
                 ></mat-progress-bar>
             </div>
         </div>
@@ -228,12 +251,12 @@
                 <p>Russian</p>
                 <mat-progress-bar
                     mode="determinate"
-                    value="90"
+                    value="95"
                 ></mat-progress-bar>
                 <p>English</p>
                 <mat-progress-bar
                     mode="determinate"
-                    value="50"
+                    value="65"
                 ></mat-progress-bar>
             </div>
             <div class="hard-skills__team-work block">
@@ -243,21 +266,54 @@
                     mode="determinate"
                     value="75"
                 ></mat-progress-bar>
-                <p>Jira</p>
+                <p>GitHub, GitLab, Bitbucket...</p>
+                <mat-progress-bar
+                    mode="determinate"
+                    value="75"
+                ></mat-progress-bar>
+                <p>Agile & Scrum</p>
                 <mat-progress-bar
                     mode="determinate"
                     value="90"
                 ></mat-progress-bar>
-                <p>Agile</p>
+                <p>Jira, Trello, ClickUp...</p>
                 <mat-progress-bar
                     mode="determinate"
-                    value="50"
+                    value="90"
                 ></mat-progress-bar>
-                <p>Scrum</p>
-                <mat-progress-bar
-                    mode="determinate"
-                    value="50"
-                ></mat-progress-bar>
+            </div>
+        </div>
+    </div>
+</ng-template>
+
+<ng-template #certificatesTab>
+    <div class="certificates">
+        <div
+            *ngFor="let certificate of certificates"
+            class="certificates__item"
+        >
+            <div class="certificates__item__img-container">
+                <img
+                    src="{{ certificate.logo }}"
+                    alt=""
+                    class="certificates__item__img-container__img"
+                />
+            </div>
+            <div class="certificates__item__info">
+                <div class="certificates__item__info__text">
+                    <span class="certificates__item__info__text__title">
+                        {{ certificate.title }}
+                    </span>
+                    <span class="certificates__item__info__text__company">
+                        {{ certificate.company }}
+                    </span>
+                </div>
+                <a
+                    class="certificates__item__info__link"
+                    href="{{ certificate.url }}"
+                    target="_blank"
+                    >View the certificate</a
+                >
             </div>
         </div>
     </div>

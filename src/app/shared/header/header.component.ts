@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { NavigationEnd, Router } from '@angular/router';
 
 import { TabsEnum } from './enums/tabs.enum';
 import { TABS } from './consts/tabs';
@@ -8,9 +9,25 @@ import { TABS } from './consts/tabs';
     templateUrl: './header.component.html',
     styleUrls: ['./header.component.scss'],
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit {
+    public currentPath: string | undefined;
     public tabs = TABS;
     public tabsArray = Object.values(this.tabs);
+
+    public constructor(private router: Router) {}
+
+    public ngOnInit(): void {
+        this.defineCurrentPath();
+    }
+
+    public defineCurrentPath(): void {
+        this.router.events.subscribe((event) => {
+            if (event instanceof NavigationEnd) {
+                this.currentPath = this.router.url;
+              console.log(this.currentPath);
+            }
+        });
+    }
 
     public allTabsInactive(): void {
         this.tabs.resume.active = false;

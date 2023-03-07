@@ -12,7 +12,7 @@
             <ng-container *ngFor="let tab of tabsArray">
                 <a
                     class="header__nav__item"
-                    [ngClass]="tab.active ? 'header__nav__item__active' : ''"
+                    [ngClass]="'/' + tab.route === currentPath ? 'header__nav__item__active' : ''"
                     (click)="activeTab(tab.title)"
                     routerLink="{{ tab.route }}"
                     >{{ tab.title }}</a
@@ -23,12 +23,12 @@
             <button mat-raised-button>
                 <a href="assets/Shpilevsky%20Andrei.pdf" download>Get CV</a>
             </button>
-            <a
-                class="header__contact__responsive-button"
-                href="assets/Shpilevsky%20Andrei.pdf"
-                download
-                >CV</a
-            >
+<!--            <a-->
+<!--                class="header__contact__responsive-button"-->
+<!--                href="assets/Shpilevsky%20Andrei.pdf"-->
+<!--                download-->
+<!--                >CV</a-->
+<!--            >-->
         </div>
     </div>
 </header>
