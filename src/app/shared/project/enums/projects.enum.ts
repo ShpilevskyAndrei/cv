@@ -1,6 +1,7 @@
 export enum ProjectsEnum {
-  cv = 'cv',
-  agroex = 'agroex',
-  npm = 'npm',
+  Cv = 'cv',
+  Agroex = 'agroex',
+  Npm = 'npm',
   SBS = 'SBS',
+  HealthyStreetFood = 'healthyStreetFood'
 }

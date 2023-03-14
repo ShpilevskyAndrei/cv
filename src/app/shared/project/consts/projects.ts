@@ -7,7 +7,7 @@ export const PROJECTS: Record<ProjectsEnum, ProjectInterface> = {
         title: 'SBS',
         type: 'Report generator',
         participants: '7',
-        dates: '2022.08.01 - in progress',
+        dates: '2022.08.01 - in supporting',
         FeTechnologies: 'HTML, CSS, TypeScript, Angular, RxJS',
         BeTechnologies:
             'C#, .Net 5 WebApi, MS SQL Server, Entity Framework, Azure',
@@ -17,9 +17,27 @@ export const PROJECTS: Record<ProjectsEnum, ProjectInterface> = {
         adaptivity: '',
         url: 'https://fivestar.squaredbusinesssolutions.com/',
         role: 'Fullstack Software Engineer',
-        stack: 'HTML, CSS, Angular, .Net 5 WebApi, MS SQL Server, Entity Framework, Spire.Xls, MongoDB, Azure Functions, Azure SignalR, Azure Queue',
+        stack: 'HTML, CSS, Angular, .Net 5 WebApi, MS SQL Server, Entity Framework, Azure',
         achievements:
             '<span>- Design Angular application architecture</br>- Setting up the project environment</br>- Regulation of code style and code writing rules</br>- Code review & refactoring</br>- Development of new features on the front-end and back-end </br>- Bug hunting, bug fixing</br></span>',
+    },
+    healthyStreetFood: {
+        logo: 'assets/projects/healthy-street-food.svg',
+        title: 'Healthy street food',
+        type: 'Business website',
+        participants: '12',
+        dates: '2022.11.01 - in dev',
+        FeTechnologies:
+            'HTML, CSS, TypeScript, Angular, Angular Material, RxJS, NgXS',
+        difficulty: '70',
+        description:
+            'Healthy street food is a platform that brings together sellers, buyers and couriers for profit and delicious healthy food.',
+        adaptivity: 'Yes',
+        url: 'https://delivery.platforms.works/',
+        role: 'Frontend Software Engineer',
+        stack: 'HTML, SCSS, TypeScript, Angular, Angular Material, BEM, ngRX, RxJS, ',
+        achievements:
+            '<span>- Developing new features</br>- Participated in the application design</br>- Layout of pages according to the UI layout</br>- Code review & refactoring</br>- Bug hunting, bug fixing</br></span>',
     },
     agroex: {
         logo: 'assets/projects/agroex.svg',
