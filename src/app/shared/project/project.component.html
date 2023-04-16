@@ -2,8 +2,7 @@
     <div class="project__container">
         <div class="project__container__logo">
             <a
-                href="{{ project.url }}"
-                [target]="project.url === '/error' ? '_self' : '_blank'"
+
             >
                 <img
                     class="project__container__logo__img"
@@ -12,10 +11,7 @@
                     title="{{ project.title }}"
                 />
             </a>
-            <a
-                href="{{ project.url }}"
-                [target]="project.url === '/error' ? '_self' : '_blank'"
-            >
+            <a>
                 <h3 class="project__container__logo__title">
                     {{ project.title }}
                 </h3>

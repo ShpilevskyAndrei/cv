@@ -3,5 +3,6 @@ export enum ProjectsEnum {
   Agroex = 'agroex',
   Npm = 'npm',
   SBS = 'SBS',
-  HealthyStreetFood = 'healthyStreetFood'
+  HealthyStreetFood = 'healthyStreetFood',
+  ARQuest = 'ARQuest'
 }
